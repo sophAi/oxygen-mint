@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Oxygen-Mint
+Comment=KDE Oxygen Theme ported on Mint-Y-Aqua backbone for Linux Mint (MATE & GTK)
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Oxygen-Mint
+MetacityTheme=Oxygen-Mint
+IconTheme=Mint-Y-Aqua
+CursorTheme=Bibata-Modern-Classic
+ButtonLayout=:minimize,maximize,close

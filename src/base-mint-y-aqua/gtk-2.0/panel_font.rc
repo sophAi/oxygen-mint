@@ -1,0 +1,8 @@
+style "modpanel"
+{
+#fg[NORMAL] = "#FFFFFF"
+fg[NORMAL] = "#000000"
+}
+widget "*PanelWidget*" style "modpanel"
+widget "*PanelApplet*" style "modpanel"
+widget "*fast-user-switch-applet*" style "modpanel"
