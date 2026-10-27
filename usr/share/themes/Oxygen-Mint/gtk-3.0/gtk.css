@@ -4694,117 +4694,139 @@ toolbar:backdrop, .toolbar:backdrop, .primary-toolbar:backdrop {
 }
 
 /* ==========================================================================
- * Scale & Slider Bars: Oxygen Styling Based on #A6BBCD
- * Volume controls, media players, brightness sliders, etc.
+ * Scale & Slider Bars: Classic Oxygen Vertical Capsule Slider & Sunken Groove
+ * Matches classic KDE/Oxygen style (e.g. Rawstudio toolbox.png)
  * ========================================================================== */
 
-/* --- Slider Knob (Slider Thumb) --- */
-scale slider {
-  min-height: 16px;
-  min-width: 16px;
-  margin: -6px;
-  border-radius: 50%;
-  border: 1px solid #6f8fa9;
-  background-color: #a6bbcd;
-  background-image: linear-gradient(to bottom, #ffffff 0%, #edf3f8 35%, #a6bbcd 70%, #8ca4b8 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 1px 3px rgba(0, 0, 0, 0.25);
+/* --- Slider Knob (Capsule / Pill Thumb) --- */
+scale slider,
+scale.horizontal slider {
+  min-height: 22px;
+  min-width: 13px;
+  margin: -10px 0;
+  border-radius: 7px;
+  border: 1px solid rgba(80, 80, 80, 0.45);
+  background-color: #ededed;
+  background-image: linear-gradient(to right, #ffffff 0%, #ffffff 18%, #ededed 55%, #d5d5d5 100%);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
 }
 
-scale slider:hover {
-  border-color: #5c84a5;
-  background-color: #b4c7d6;
-  background-image: linear-gradient(to bottom, #ffffff 0%, #f4f8fb 35%, #b4c7d6 70%, #95adbf 100%);
-  box-shadow: 0 0 5px rgba(166, 187, 205, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+scale slider:hover,
+scale.horizontal slider:hover {
+  border-color: #1f9ede;
+  box-shadow: 0 0 5px rgba(31, 158, 222, 0.65), 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-scale slider:active {
-  border-color: #4e779c;
-  background-color: #b3cde3;
-  background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 35%, #b3cde3 70%, #99bcd8 100%);
-  box-shadow: 0 0 6px rgba(179, 205, 227, 0.95), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+scale slider:active,
+scale.horizontal slider:active {
+  border-color: #167bb0;
+  background-image: linear-gradient(to right, #ffffff 0%, #f0f7fb 18%, #d8eaf5 55%, #b8d7eb 100%);
+  box-shadow: 0 0 6px rgba(22, 123, 176, 0.75), 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-scale slider:disabled {
-  border-color: #b5b5b5;
-  background-color: #d8d8d8;
-  background-image: none;
+scale slider:disabled,
+scale.horizontal slider:disabled {
+  border-color: rgba(140, 140, 140, 0.35);
+  background-color: #e2e2e2;
+  background-image: linear-gradient(to right, #f5f5f5 0%, #ebebeb 50%, #d8d8d8 100%);
   box-shadow: none;
 }
 
-/* Headerbar, Toolbar and Popover Sliders */
+/* Vertical Scale Slider Knob (Horizontal Pill) */
+scale.vertical slider {
+  min-height: 13px;
+  min-width: 22px;
+  margin: 0 -10px;
+  border-radius: 7px;
+  border: 1px solid rgba(80, 80, 80, 0.45);
+  background-color: #ededed;
+  background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 18%, #ededed 55%, #d5d5d5 100%);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
+}
+
+scale.vertical slider:hover {
+  border-color: #1f9ede;
+  box-shadow: 0 0 5px rgba(31, 158, 222, 0.65), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+scale.vertical slider:active {
+  border-color: #167bb0;
+  background-image: linear-gradient(to bottom, #ffffff 0%, #f0f7fb 18%, #d8eaf5 55%, #b8d7eb 100%);
+  box-shadow: 0 0 6px rgba(22, 123, 176, 0.75), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+scale.vertical slider:disabled {
+  border-color: rgba(140, 140, 140, 0.35);
+  background-color: #e2e2e2;
+  background-image: linear-gradient(to bottom, #f5f5f5 0%, #ebebeb 50%, #d8d8d8 100%);
+  box-shadow: none;
+}
+
+/* Headerbar, Toolbar and Popover Sliders inherit classic capsule */
 .primary-toolbar scale slider,
 headerbar scale slider,
 popover scale slider,
 menuitem scale slider {
-  border: 1px solid #6f8fa9;
-  background-color: #a6bbcd;
-  background-image: linear-gradient(to bottom, #ffffff 0%, #edf3f8 35%, #a6bbcd 70%, #8ca4b8 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 1px 3px rgba(0, 0, 0, 0.2);
+  min-height: 22px;
+  min-width: 13px;
+  margin: -10px 0;
+  border-radius: 7px;
+  border: 1px solid rgba(80, 80, 80, 0.45);
+  background-color: #ededed;
+  background-image: linear-gradient(to right, #ffffff 0%, #ffffff 18%, #ededed 55%, #d5d5d5 100%);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
 }
 
 .primary-toolbar scale slider:hover,
 headerbar scale slider:hover,
 popover scale slider:hover,
 menuitem scale slider:hover {
-  border-color: #5c84a5;
-  background-color: #b4c7d6;
-  background-image: linear-gradient(to bottom, #ffffff 0%, #f4f8fb 35%, #b4c7d6 70%, #95adbf 100%);
-  box-shadow: 0 0 5px rgba(166, 187, 205, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  border-color: #1f9ede;
+  box-shadow: 0 0 5px rgba(31, 158, 222, 0.65), 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .primary-toolbar scale slider:active,
 headerbar scale slider:active,
 popover scale slider:active,
 menuitem scale slider:active {
-  border-color: #4e779c;
-  background-color: #b3cde3;
-  background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 35%, #b3cde3 70%, #99bcd8 100%);
-  box-shadow: 0 0 6px rgba(179, 205, 227, 0.95), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  border-color: #167bb0;
+  background-image: linear-gradient(to right, #ffffff 0%, #f0f7fb 18%, #d8eaf5 55%, #b8d7eb 100%);
+  box-shadow: 0 0 6px rgba(22, 123, 176, 0.75), 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* Trough (Groove) */
+/* Trough (Classic Sunken Groove Line: 2px height, subtle top shadow, highlight below) */
 scale trough {
-  border-radius: 4px;
-  border: 1px solid #b4b4b4;
-  background-color: #cacaca;
-  background-image: linear-gradient(to bottom, #bfbfbf 0%, #d4d4d4 100%);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.18);
+  min-height: 2px;
+  min-width: 2px;
+  border: none;
+  border-radius: 1px;
+  background-color: #b4b6b4;
+  background-image: linear-gradient(to bottom, #7e7e7d 0%, #b4b6b4 50%, #ffffff 100%);
+  box-shadow: none;
 }
 
 scale.vertical trough {
-  background-image: linear-gradient(to right, #bfbfbf 0%, #d4d4d4 100%);
+  background-image: linear-gradient(to right, #7e7e7d 0%, #b4b6b4 50%, #ffffff 100%);
 }
 
 scale trough:disabled {
-  background-color: #d8d8d8;
-  background-image: none;
-  border-color: #c4c4c4;
+  background-image: linear-gradient(to bottom, #a0a0a0 0%, #c0c0c0 50%, #ececec 100%);
 }
 
-/* Highlight (Active Filled Level, e.g. Volume Level) */
-scale highlight {
-  border-radius: 3px;
-  border: 1px solid #6f8fa9;
-  background-color: #a6bbcd;
-  background-image: linear-gradient(to bottom, #e2ecf4 0%, #b8cddc 46%, #a6bbcd 52%, #8ca4b8 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), inset 0 -1px 0 rgba(0, 0, 0, 0.12);
-}
-
-scale.vertical highlight {
-  background-image: linear-gradient(to right, #e2ecf4 0%, #b8cddc 46%, #a6bbcd 52%, #8ca4b8 100%);
-  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.75), inset -1px 0 0 rgba(0, 0, 0, 0.12);
-}
-
-scale highlight:disabled {
-  background-color: rgba(166, 187, 205, 0.5);
-  background-image: none;
-  border-color: rgba(111, 143, 169, 0.5);
-}
-
-/* Fill (Buffer level) */
+/* Highlight & Fill (Classic Oxygen uses clean groove line with thumb position indicator, no thick colored bar) */
+scale highlight,
 scale fill {
-  border-radius: 3px;
-  background-color: rgba(166, 187, 205, 0.4);
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+
+scale highlight:disabled,
+scale fill:disabled {
+  background-color: transparent;
+  background-image: none;
+  border: none;
 }
 
 /* ==========================================================================
