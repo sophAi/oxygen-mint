@@ -25,8 +25,9 @@
   特別加入隔離過濾規則，徹底保護 Caja、Nemo、Nautilus 與 XFCE 桌面管理器視窗透明度，絕不干擾或覆蓋使用者自訂桌布。
 - **立體水晶按鈕 (3D Glossy Buttons)**：
   細緻雕琢按鈕高光漸層（`#ffffff` → `#ebebeb` → `#dadada`）、1px 細緻外框與內反光立體倒角，滑鼠懸停時綻放湛藍色柔和光暈。
-- **原汁原味膠囊圓弧捲軸與方向按鈕 (Pill Capsule Scrollbars & Steppers)**：
-  整合更新版高解析度素材（`scroll-thumb-vert.png`、`scroll-thumb-horiz.png`），捲軸等比縮放至舒適精簡的 14px（0.8x），保留半圓形膠囊端點（`border-radius: 9999px`）與微下陷底軌；前後端點完整支援經典 Oxygen 步進按鈕（垂直捲軸頂部向上 `▲`、底部向下 `▼`；水平捲軸向左 `◀`、向右 `▶`，並具備 RTL 鏡像適配）。
+- **原汁原味膠囊圓弧捲軸、刻痕底槽與無縫步進按鈕 (Scrollbar with Trough Groove & Seamless Steppers)**：
+  - **藍色水晶滑塊與立體刻痕底槽 (Crystal Thumb & Trough Groove)**：滑軌底槽忠實重現 Oxygen 經典中央立體刻痕（左/頂部陰影線 `#C7C7C8`、右/底部高光線 `#EEEEEE`），搭配藍色水晶膠囊滑塊（`#A6BBCD`），展現精緻凹凸立體景深。
+  - **無縫步進按鈕 (Seamless Steppers)**：直接擷取自 `oxygen-gtk` 原生 `scrollbar.png` 之高精度人字形箭頭圖示（垂直捲軸頂部向上 `▲`、底部向下 `▼`；水平捲軸向左 `◀`、向右 `▶`，支援 RTL）。步進按鈕邊緣無邊界線、無陰影線、無高光線，與滑軌底槽自然一體化無縫銜接，懸停與點擊時具備 Oxygen 標誌性湛藍高亮反饋。
 - **進度指示條 (Progress Bars)**：
   以 Oxygen 標誌性的天空藍 **`#A6BBCD`** 為基底，呈現多重金屬高光過渡漸層，並搭配深色凹槽底軌。
 - **控制滑桿 (Scale & Slider Bars)**：

@@ -4269,16 +4269,18 @@ entry:focus {
 }
 
 scrollbar {
-  background-color: #D8D8D8;
+  background-color: #dadada;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 scrollbar.vertical {
-  background-image: linear-gradient(to right, #cecece 0%, #d8d8d8 50%, #e2e2e2 100%);
+  background-color: #dadada;
+  background-image: none;
 }
 
 scrollbar.horizontal {
-  background-image: linear-gradient(to bottom, #cecece 0%, #d8d8d8 50%, #e2e2e2 100%);
+  background-color: #dadada;
+  background-image: none;
 }
 
 scrollbar.top { border-bottom: 1px solid #b7b5b3; }
@@ -4286,88 +4288,211 @@ scrollbar.bottom { border-top: 1px solid #b7b5b3; }
 scrollbar.left { border-right: 1px solid #b7b5b3; }
 scrollbar.right { border-left: 1px solid #b7b5b3; }
 
-/* Stepper buttons (11x11) */
+/* Stepper buttons (11x11, seamless with trough - no border, no shadow, no highlight) */
 scrollbar button {
   min-width: 11px;
   min-height: 11px;
   padding: 0;
-  border-radius: 2px;
-  border: 1px solid #a8a6a4;
-  background-image: linear-gradient(to bottom, #ffffff 0%, #ebebeb 50%, #d8d8d8 100%);
-  color: #555555;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  background-color: #dadada;
+  background-image: none;
+  color: #383838;
 }
 
 scrollbar button:hover {
-  border-color: #6da2cb;
-  background-image: linear-gradient(to bottom, #ffffff 0%, #f4f8fb 50%, #d8e5f0 100%);
-  box-shadow: 0 0 4px rgba(166, 187, 205, 0.8);
-  color: #2b455b;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: #dadada;
+  background-image: none;
+  color: #1f9ede;
 }
 
 scrollbar button:active {
-  border-color: #6897bf;
-  background-image: linear-gradient(to bottom, #b3cde3 0%, #d8e6f2 100%);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: #dadada;
+  background-image: none;
+  color: #1565a0;
 }
 
-/* Stepper arrow icons */
+scrollbar button:disabled {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: #dadada;
+  background-image: none;
+  color: #a0a0a0;
+}
+
+/* Stepper arrow icons from oxygen-gtk scrollbar.png */
 scrollbar.vertical button.up,
 scrollbar.vertical button.top,
 scrollbar.vertical > button.up,
 scrollbar.vertical > button.top {
-  -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+  -gtk-icon-source: url("assets/stepper-up.png");
+}
+
+scrollbar.vertical button.up:hover,
+scrollbar.vertical button.top:hover,
+scrollbar.vertical > button.up:hover,
+scrollbar.vertical > button.top:hover {
+  -gtk-icon-source: url("assets/stepper-up-prelight.png");
+}
+
+scrollbar.vertical button.up:active,
+scrollbar.vertical button.top:active,
+scrollbar.vertical > button.up:active,
+scrollbar.vertical > button.top:active {
+  -gtk-icon-source: url("assets/stepper-up-active.png");
+}
+
+scrollbar.vertical button.up:disabled,
+scrollbar.vertical button.top:disabled,
+scrollbar.vertical > button.up:disabled,
+scrollbar.vertical > button.top:disabled {
+  -gtk-icon-source: url("assets/stepper-up-insens.png");
 }
 
 scrollbar.vertical button.down,
 scrollbar.vertical button.bottom,
 scrollbar.vertical > button.down,
 scrollbar.vertical > button.bottom {
-  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+  -gtk-icon-source: url("assets/stepper-down.png");
+}
+
+scrollbar.vertical button.down:hover,
+scrollbar.vertical button.bottom:hover,
+scrollbar.vertical > button.down:hover,
+scrollbar.vertical > button.bottom:hover {
+  -gtk-icon-source: url("assets/stepper-down-prelight.png");
+}
+
+scrollbar.vertical button.down:active,
+scrollbar.vertical button.bottom:active,
+scrollbar.vertical > button.down:active,
+scrollbar.vertical > button.down:active {
+  -gtk-icon-source: url("assets/stepper-down-active.png");
+}
+
+scrollbar.vertical button.down:disabled,
+scrollbar.vertical button.bottom:disabled,
+scrollbar.vertical > button.down:disabled,
+scrollbar.vertical > button.bottom:disabled {
+  -gtk-icon-source: url("assets/stepper-down-insens.png");
 }
 
 scrollbar.horizontal button.up,
 scrollbar.horizontal button.left,
 scrollbar.horizontal > button.up,
 scrollbar.horizontal > button.left {
-  -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
+  -gtk-icon-source: url("assets/stepper-left.png");
+}
+
+scrollbar.horizontal button.up:hover,
+scrollbar.horizontal button.left:hover,
+scrollbar.horizontal > button.up:hover,
+scrollbar.horizontal > button.left:hover {
+  -gtk-icon-source: url("assets/stepper-left-prelight.png");
+}
+
+scrollbar.horizontal button.up:active,
+scrollbar.horizontal button.left:active,
+scrollbar.horizontal > button.up:active,
+scrollbar.horizontal > button.left:active {
+  -gtk-icon-source: url("assets/stepper-left-active.png");
+}
+
+scrollbar.horizontal button.up:disabled,
+scrollbar.horizontal button.left:disabled,
+scrollbar.horizontal > button.up:disabled,
+scrollbar.horizontal > button.left:disabled {
+  -gtk-icon-source: url("assets/stepper-left-insens.png");
 }
 
 scrollbar.horizontal button.down,
 scrollbar.horizontal button.right,
 scrollbar.horizontal > button.down,
 scrollbar.horizontal > button.right {
-  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+  -gtk-icon-source: url("assets/stepper-right.png");
+}
+
+scrollbar.horizontal button.down:hover,
+scrollbar.horizontal button.right:hover,
+scrollbar.horizontal > button.down:hover,
+scrollbar.horizontal > button.right:hover {
+  -gtk-icon-source: url("assets/stepper-right-prelight.png");
+}
+
+scrollbar.horizontal button.down:active,
+scrollbar.horizontal button.right:active,
+scrollbar.horizontal > button.down:active,
+scrollbar.horizontal > button.right:active {
+  -gtk-icon-source: url("assets/stepper-right-active.png");
+}
+
+scrollbar.horizontal button.down:disabled,
+scrollbar.horizontal button.right:disabled,
+scrollbar.horizontal > button.down:disabled,
+scrollbar.horizontal > button.right:disabled {
+  -gtk-icon-source: url("assets/stepper-right-insens.png");
 }
 
 scrollbar.horizontal button.up:dir(rtl),
 scrollbar.horizontal > button.up:dir(rtl) {
-  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+  -gtk-icon-source: url("assets/stepper-right.png");
 }
 
 scrollbar.horizontal button.down:dir(rtl),
 scrollbar.horizontal > button.down:dir(rtl) {
-  -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
+  -gtk-icon-source: url("assets/stepper-left.png");
 }
 
-/* Trough (11px, Scroll Thumb Background) */
+/* Trough (11px, with central groove刻痕) */
 scrollbar trough,
 scrollbar.vertical trough {
   min-width: 11px;
-  background-color: #D8D8D8;
-  background-image: url("assets/scroll-thumb-vert.png");
+  background-color: #dadada;
+  background-image: linear-gradient(to right,
+    #dadada 0%,
+    #dadada calc(50% - 3px),
+    #c7c7c8 calc(50% - 2px),
+    #d0d0d0 calc(50% - 1px),
+    #d8d8d9 50%,
+    #e2e2e3 calc(50% + 1px),
+    #ebebec calc(50% + 2px),
+    #eeeeef calc(50% + 3px),
+    #dadada calc(50% + 4px),
+    #dadada 100%
+  );
   border: none;
   border-image: none;
-  border-radius: 9999px;
+  border-radius: 0;
   box-shadow: none;
 }
 
 scrollbar.horizontal trough {
   min-height: 11px;
-  background-color: #D8D8D8;
-  background-image: url("assets/scroll-thumb-horiz.png");
+  background-color: #dadada;
+  background-image: linear-gradient(to bottom,
+    #dadada 0%,
+    #dadada calc(50% - 3px),
+    #c7c7c8 calc(50% - 2px),
+    #d0d0d0 calc(50% - 1px),
+    #d8d8d9 50%,
+    #e2e2e3 calc(50% + 1px),
+    #ebebec calc(50% + 2px),
+    #eeeeef calc(50% + 3px),
+    #dadada calc(50% + 4px),
+    #dadada 100%
+  );
   border: none;
   border-image: none;
-  border-radius: 9999px;
+  border-radius: 0;
   box-shadow: none;
 }
 
