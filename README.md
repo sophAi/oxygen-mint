@@ -32,8 +32,10 @@
   以 Oxygen 標誌性的天空藍 **`#A6BBCD`** 為基底，呈現多重金屬高光過渡漸層，並搭配深色凹槽底軌。
 - **控制滑桿 (Scale & Slider Bars)**：
   忠實重現經典 KDE 4 Oxygen 與專業修圖軟體（如 Rawstudio）之經典滑桿風格：
-  - **立體金屬圓柱膠囊滑塊 (Vertical Capsule Thumb)**：採用 13×22px 垂直圓柱膠囊造型，具備細緻左側金屬圓柱高光線條（`#FFFFFF`）、柔和銀灰本體（`#EDEDED`）與極細微外框，滑鼠懸停與按壓操作時散發經典 Oxygen 湛藍光暈。
+  - **立體金屬圓柱膠囊滑塊 (Vertical Capsule Thumb)**：採用緊湊精緻的 10×14px 垂直圓柱膠囊造型（避免相鄰密集滑桿上下互相重疊），具備細緻左側金屬圓柱高光線條（`#FFFFFF`）、柔和銀灰本體（`#EDEDED`）與極細微外框，滑鼠懸停與按壓操作時散發經典 Oxygen 湛藍光暈。
   - **2px 立體下陷刻痕軌道 (Sunken Groove Trough)**：軌道採用極細 2px 下陷刻痕（頂部陰影線 `#7E7E7D`、中間底色 `#B4B6B4`、底部高光反光線 `#FFFFFF`），去除粗厚彩色填充條，以俐落刻痕與立體膠囊精確標示數值，兼顧視覺輕盈感與精密工藝質感。
+- **分頁與面板底色沉穩一致化 (Notebook Tabs & Stack Background)**：
+  將分頁內容容器（`notebook > stack`）全面統整為 Oxygen 經典底色 `#D8D8D8`，消除傳統白色突兀底色，使工具箱（Toolbox）與各類對話框面板整體色調渾然一體。
 - **Linux Mint / MATE 音量 OSD 彈出視窗專屬優化 (Volume & Media OSD HUD)**：
   專門為 `mate-settings-daemon`（`MsdMediaKeysWindow`）量身打造樣式：
   - 具備 12px 圓角與立體陰影的高對比 HUD 視窗框架。

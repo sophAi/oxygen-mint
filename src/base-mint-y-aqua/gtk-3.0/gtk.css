@@ -4550,7 +4550,7 @@ scrollbar slider:disabled {
   background-image: linear-gradient(to right, #c0c8cf 0%, #e2e7eb 40%, #bac3cb 100%);
 }
 
-/* --- Notebook Tabs --- */
+/* --- Notebook Tabs & Stack (Oxygen Background #D8D8D8) --- */
 notebook tab {
   border-radius: 4px 4px 0 0;
   padding: 5px 12px;
@@ -4571,6 +4571,15 @@ notebook tab:checked {
   border-top: 2px solid #1f9ede;
   color: #1a1a1a;
   box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.05);
+}
+
+notebook > stack,
+notebook > stack:not(:only-child) {
+  background-color: #D8D8D8;
+}
+
+notebook > header {
+  background-color: #D8D8D8;
 }
 
 /* --- Headerbars & Titlebars --- */
@@ -4701,10 +4710,10 @@ toolbar:backdrop, .toolbar:backdrop, .primary-toolbar:backdrop {
 /* --- Slider Knob (Capsule / Pill Thumb) --- */
 scale slider,
 scale.horizontal slider {
-  min-height: 22px;
-  min-width: 13px;
-  margin: -10px 0;
-  border-radius: 7px;
+  min-height: 14px;
+  min-width: 10px;
+  margin: -6px 0;
+  border-radius: 5px;
   border: 1px solid rgba(80, 80, 80, 0.45);
   background-color: #ededed;
   background-image: linear-gradient(to right, #ffffff 0%, #ffffff 18%, #ededed 55%, #d5d5d5 100%);
@@ -4734,10 +4743,10 @@ scale.horizontal slider:disabled {
 
 /* Vertical Scale Slider Knob (Horizontal Pill) */
 scale.vertical slider {
-  min-height: 13px;
-  min-width: 22px;
-  margin: 0 -10px;
-  border-radius: 7px;
+  min-height: 10px;
+  min-width: 14px;
+  margin: 0 -6px;
+  border-radius: 5px;
   border: 1px solid rgba(80, 80, 80, 0.45);
   background-color: #ededed;
   background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 18%, #ededed 55%, #d5d5d5 100%);
@@ -4767,10 +4776,10 @@ scale.vertical slider:disabled {
 headerbar scale slider,
 popover scale slider,
 menuitem scale slider {
-  min-height: 22px;
-  min-width: 13px;
-  margin: -10px 0;
-  border-radius: 7px;
+  min-height: 14px;
+  min-width: 10px;
+  margin: -6px 0;
+  border-radius: 5px;
   border: 1px solid rgba(80, 80, 80, 0.45);
   background-color: #ededed;
   background-image: linear-gradient(to right, #ffffff 0%, #ffffff 18%, #ededed 55%, #d5d5d5 100%);
