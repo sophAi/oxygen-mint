@@ -4452,21 +4452,20 @@ scrollbar.horizontal > button.down:dir(rtl) {
   -gtk-icon-source: url("assets/stepper-left.png");
 }
 
-/* Trough (11px, with central groove刻痕) */
+/* Trough (11px, with central groove刻痕 - perfectly centered) */
 scrollbar trough,
 scrollbar.vertical trough {
   min-width: 11px;
   background-color: #dadada;
   background-image: linear-gradient(to right,
     #dadada 0%,
-    #dadada calc(50% - 3px),
-    #c7c7c8 calc(50% - 2px),
-    #d0d0d0 calc(50% - 1px),
+    #dadada calc(50% - 2.5px),
+    #c7c7c8 calc(50% - 1.5px),
+    #d0d0d0 calc(50% - 0.5px),
     #d8d8d9 50%,
-    #e2e2e3 calc(50% + 1px),
-    #ebebec calc(50% + 2px),
-    #eeeeef calc(50% + 3px),
-    #dadada calc(50% + 4px),
+    #e2e2e3 calc(50% + 0.5px),
+    #eeeeef calc(50% + 1.5px),
+    #dadada calc(50% + 2.5px),
     #dadada 100%
   );
   border: none;
@@ -4480,14 +4479,13 @@ scrollbar.horizontal trough {
   background-color: #dadada;
   background-image: linear-gradient(to bottom,
     #dadada 0%,
-    #dadada calc(50% - 3px),
-    #c7c7c8 calc(50% - 2px),
-    #d0d0d0 calc(50% - 1px),
+    #dadada calc(50% - 2.5px),
+    #c7c7c8 calc(50% - 1.5px),
+    #d0d0d0 calc(50% - 0.5px),
     #d8d8d9 50%,
-    #e2e2e3 calc(50% + 1px),
-    #ebebec calc(50% + 2px),
-    #eeeeef calc(50% + 3px),
-    #dadada calc(50% + 4px),
+    #e2e2e3 calc(50% + 0.5px),
+    #eeeeef calc(50% + 1.5px),
+    #dadada calc(50% + 2.5px),
     #dadada 100%
   );
   border: none;
